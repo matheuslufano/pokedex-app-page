@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #ef5350;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.sobre-section {
+  padding: 40px 20px;
+  background-color: #fefefe;
+}
+
+.sobre-section .conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.sobre-section .texto {
+  flex: 1;
+  min-width: 280px;
+  text-align: justify;
+}
+
+.sobre-section .foto {
+  flex: 1;
+  text-align: center;
+}
+
+.sobre-section .foto img {
+  max-width: 250px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Carrossel */
+.carrossel-title {
+  color: #fefefe;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ffffff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.carrossel-section {
+  padding: 40px 20px;
+  background-color: #F7776A;
+  text-align: center;
+  border-radius: 3%;
+}
+
+.carrossel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+
+.carrossel .imagens {
+  
+  width: 700px;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carrossel .imagens img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carrossel .imagens img.ativa {
+  opacity: 1;
+}
+
+
+.carrossel button {
+  background-color: #ef5350;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.carrossel button:hover {
+  background-color: #d32f2f;
+}
+
+/* Carrossel */
+
+.app-image {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.app-image:hover {
+  transform: scale(1.05);
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #ef5350;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ef5350;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+ul.features {
+  list-style-type: none;
+}
+
+ul.features li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+ul.features li::before {
+  content: '✓';
+  color: #ef5350;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.download-buttons {
+  text-align: center;
+}
+
+.btn {
+  background-color: #ef5350;
+  color: white;
+  padding: 15px 30px;
+  margin: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d84343;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+/* Responsividade simples */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    margin: 8px 10px;
+    font-size: 0.9rem;
+  }
+  .sobre-section .conteudo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-section .foto img {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carrossel {
+    gap: 140px;
+  }
+
+  .carrossel .imagens {
+    width: 350px;
+    height: 350px;
+  }
+
+  .carrossel button {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+}
